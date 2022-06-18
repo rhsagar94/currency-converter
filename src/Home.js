@@ -1,15 +1,17 @@
+import React, { useEffect, useState } from 'react';
 import React from 'react';
 
 function Home(props) {
-    return (
-        <div>
-            Hello! It's Home 
-            {props.newUser ? " Welcome aboard " : " Welcome back "}
-            {props.name}
+	const [rate, setRate] = useState(null);
 
-        
-        </div>
-    );
+	useEffect(() => {
+		const url = `https://api.exchangerate.host/latest`;
+		fetch(url)
+			.then((res) => res.json())
+			.then((data) => setRate(data));
+	}, []);
+
+	return <div>{rate}</div>;
 }
 
 export default Home;
