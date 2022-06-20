@@ -11,7 +11,7 @@ function Home(props) {
 			.then((data) => setRate(data));
 	}, []);
 
-	return <div>{rate}</div>;
+	return <div>This is the current rate: {rate}</div>;
 }
 
 export default Home;
