@@ -1,11 +1,12 @@
 import './App.css';
 import Home from './Home';
-import { Route, Routes, Link } from 'react-router-dom';
+import Currency from './Currency';
 
 function App() {
 	return (
 		<div>
 			<Home />
+			{/* <Currency /> */}
 		</div>
 	);
 }
