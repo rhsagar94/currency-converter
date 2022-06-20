@@ -1,17 +1,27 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import React from 'react';
 
 function Home(props) {
 	const [rate, setRate] = useState(null);
 
 	useEffect(() => {
-		const url = `https://api.exchangerate.host/latest`;
-		fetch(url)
+		fetch(`https://api.exchangerate.host/latest`)
 			.then((res) => res.json())
-			.then((data) => setRate(data));
+			.then((rate) => {
+				setRate(rate);
+				console.log(rate);
+			})
+			.catch((err) => {
+				console.log('Something went wrong ', err);
+			});
 	}, []);
 
-	return <div>This is the current rate: {rate}</div>;
+	return (
+		<div>
+			<h2>This is the current rate: {props.rates}</h2>
+			<p></p>
+		</div>
+	);
 }
 
 export default Home;
