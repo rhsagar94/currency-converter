@@ -30,7 +30,7 @@ function Home(props) {
 
 	return (
 		<div>
-			<h2>The base currency is: {rate.base} </h2>
+			<h2>The base currency is: {rate.base}O </h2>
 			<p>The current rate of USD is: {rate.rates.USD}</p>
 			<p>The current rate of CAD is: {rate.rates.CAD}</p>
 			<p>The current rate of AUD is: {rate.rates.AUD}</p>
