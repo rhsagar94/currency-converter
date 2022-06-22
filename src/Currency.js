@@ -11,15 +11,17 @@ function Currency(props) {
 	const [formState, setFormState] = useState(initialFormState);
 	const [data, setData] = useState(null);
 	const [converted, setConvert] = useState(null);
+	const [confirm, setConfirm] = useState(false);
 
 	function handleSubmit(event) {
 		event.preventDefault();
 		getData();
+		setConfirm(true);
 		console.log('You clicked me');
 		console.log(formState.from);
 		console.log(formState.to);
 		console.log(formState.amount);
-
+		console.log(confirm);
 		// console.log(converted);
 
 		// setFormState(initialFormState);
@@ -36,7 +38,7 @@ function Currency(props) {
 				return setData(res);
 			})
 			.then((res) => {
-				const newData = data.info.rate * formState.amount;
+				const newData = data?.info.rate * formState.amount;
 
 				setConvert(newData);
 				console.log(newData);
@@ -49,10 +51,6 @@ function Currency(props) {
 	}, []);
 
 	// console.log(data);
-
-	// if (!data) {
-	// 	return <p>Loading information ...</p>;
-	// }
 
 	return (
 		<div>
@@ -87,8 +85,11 @@ function Currency(props) {
 					}
 				/>
 			</form>
-			
-			<h1>The converted amount is: {data?.info.rate * formState.amount} </h1>
+
+			<h1>
+				The converted amount is: {confirm && data?.info.rate * formState.amount}{' '}
+				{confirm && formState.to}
+			</h1>
 		</div>
 	);
 }
