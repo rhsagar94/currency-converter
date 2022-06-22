@@ -1,3 +1,4 @@
+// Insert code between the backticks
 import React from 'react';
 import { useState, useEffect } from 'react';
 
@@ -61,18 +62,20 @@ function Currency(props) {
 					type='text'
 					id='from'
 					value={formState.from}
-					onChange={(event) =>
-						setFormState({ ...formState, from: event.target.value })
-					}
+					onChange={(event) => {
+						setConfirm(false);
+						setFormState({ ...formState, from: event.target.value });
+					}}
 				/>
 				<label htmlFor='to'>To: </label>
 				<input
 					type='text'
 					id='to'
 					value={formState.to}
-					onChange={(event) =>
-						setFormState({ ...formState, to: event.target.value })
-					}
+					onChange={(event) => {
+						setConfirm(false);
+						setFormState({ ...formState, to: event.target.value });
+					}}
 				/>
 				<button type='submit'>Confirm</button>
 				<label htmlFor='amount'>Amount: </label>
@@ -80,9 +83,10 @@ function Currency(props) {
 					type='text'
 					id='amount'
 					value={formState.amount}
-					onChange={(event) =>
-						setFormState({ ...formState, amount: event.target.value })
-					}
+					onChange={(event) => {
+						setConfirm(false);
+						setFormState({ ...formState, amount: event.target.value });
+					}}
 				/>
 			</form>
 
