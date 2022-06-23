@@ -1,16 +1,25 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import './Navigation.css';
 
 function Navigation(props) {
 	return (
-		<div>
-			<Link style={{ textDecoration: 'none' }} to='/'>
-				<h2>Home</h2>
-			</Link>
-			<Link style={{ textDecoration: 'none' }} to='/currency'>
-				<h2>Currency Conversion</h2>
-			</Link>
-		</div>
+		<ul>
+			<li>
+				<h2>
+					<Link style={{ textDecoration: 'none' }} to='/'>
+						<p>Home</p>
+					</Link>
+				</h2>
+			</li>
+			<li>
+				<h2>
+					<Link style={{ textDecoration: 'none' }} to='/currency'>
+						<p>Currency Conversion</p>
+					</Link>
+				</h2>
+			</li>
+		</ul>
 	);
 }
 
