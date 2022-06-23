@@ -11,7 +11,7 @@ function Currency(props) {
 
 	const [formState, setFormState] = useState(initialFormState);
 	const [data, setData] = useState(null);
-	const [converted, setConvert] = useState(null);
+	// const [converted, setConvert] = useState(null);
 	const [confirm, setConfirm] = useState(false);
 
 	function handleSubmit(event) {
@@ -41,7 +41,7 @@ function Currency(props) {
 			.then((res) => {
 				const newData = data?.info.rate * formState.amount;
 
-				setConvert(newData);
+				// setConvert(newData);
 				console.log(newData);
 			})
 			.catch((err) => console.log('Something went wrong', err));
@@ -77,7 +77,7 @@ function Currency(props) {
 						setFormState({ ...formState, to: event.target.value });
 					}}
 				/>
-				<button type='submit'>Confirm</button>
+
 				<label htmlFor='amount'>Amount: </label>
 				<input
 					type='text'
@@ -88,6 +88,7 @@ function Currency(props) {
 						setFormState({ ...formState, amount: event.target.value });
 					}}
 				/>
+				<button type='submit'>Confirm</button>
 			</form>
 
 			<h1>
