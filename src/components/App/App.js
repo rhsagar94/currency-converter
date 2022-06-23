@@ -1,6 +1,6 @@
 import './App.css';
-import Home from './Home';
-import Currency from './Currency';
+import Home from '../Home/Home';
+import Currency from '../Currency/Currency';
 
 function App() {
 	return (
