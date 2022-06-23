@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import background from '/home/rabbi/Desktop/sei/homework/week6/currency-converter/src/components/Header/header1.jpeg';
+import background from './header1.jpeg';
 
 function Header(props) {
 	return (
