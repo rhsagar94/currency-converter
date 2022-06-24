@@ -4,6 +4,7 @@ My project is about knowing the exchange rate of all the currencies all over the
 
 Screenshot:
 ![plot](Screenshot of project2.png)
+Screenshot of project2.png
 
 Technologies Used:
 
