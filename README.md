@@ -3,8 +3,7 @@ Description:
 My project is about knowing the exchange rate of all the currencies all over the world. Being an immigrant, very often I have to check at the exchange rate of my home currency before making any transactions. That gave me the idea of making a website where not only you can see the exchange rate of a currency also you can calculate the amount you want to convert.
 
 Screenshot:
-![plot](Screenshot of project2.png)
-Screenshot of project2.png
+![screenshot of project](Screenshot of project2.png)
 
 Technologies Used:
 
