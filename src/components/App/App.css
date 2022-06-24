@@ -36,3 +36,31 @@
     transform: rotate(360deg);
   }
 }
+
+.parent {
+  display: grid;
+  grid-template-rows: repeat(9, 100px);
+  grid-template-columns: 100px 70px 1fr; 
+  background-color: lightblue;
+}
+.header {
+  grid-row: 1 / span 3;
+  grid-column: 1 / span 3;
+}
+
+.footer {
+  background: orange;
+  grid-row: 9;
+  grid-column: 1/ span 3;
+}
+
+.nav {
+  
+  grid-row: 5 / span 1;
+  grid-column: 1 / span 3;
+}
+
+.body {
+  grid-row: 5;
+  grid-column: 3 / span 4;
+}

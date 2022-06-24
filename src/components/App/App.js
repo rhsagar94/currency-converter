@@ -8,16 +8,28 @@ import Navigation from '../Navigation/Navigation';
 
 function App() {
 	return (
-		<div>
-			<Header />
-			<Navigation />
+		<div className='parent'>
+			
+			<div className='header'>
+				<Header />
+			</div>
+			<div className='nav'>
+				<Navigation />
+			</div>
 
-			<Routes>
-				<Route path='/' element={<Home />} />
+			<div className='body'>
+				<Routes>
+					<Route path='/' element={<Home />} />
 
-				<Route path='/currency' element={<Currency />} />
-			</Routes>
-			<Footer />
+					<Route path='/' element={<Home />} />
+
+					<Route path='/currency' element={<Currency />} />
+				</Routes>
+			</div>
+
+			<div className='footer'>
+				<Footer />
+			</div>
 		</div>
 	);
 }

@@ -8,8 +8,9 @@ function Header(props) {
 			style={{
 				backgroundImage: `url(${background})`,
 
-				height: '300px',
-				width: '700px',
+				height: '100%',
+				width: '100%',
+				resizeMode: 'contain'
 			}}>
 			<Link style={{ textDecoration: 'none' }} to='/'>
 				<h1>Currency Conversion Site</h1>
