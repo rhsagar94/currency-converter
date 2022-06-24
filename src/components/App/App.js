@@ -9,7 +9,6 @@ import Navigation from '../Navigation/Navigation';
 function App() {
 	return (
 		<div className='parent'>
-			
 			<div className='header'>
 				<Header />
 			</div>
