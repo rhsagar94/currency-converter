@@ -1,13 +1,13 @@
+
+
 ul {
     list-style-type: none;
-        margin: 0;
-        padding: 0;
-        width: 25%;
-        background-color: rgba(170, 163, 67, 0.5);;
-        /* height: 100%;
-        position: fixed;
-        overflow: auto; */
-        
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    background-color: rgba(44, 136, 211, 0.6);
+    
+    border: 1px solid #555;
 }
 
 li {
@@ -19,8 +19,7 @@ li:last-child {
     border-bottom: none;
 }
 
-
-li h2 p {
+ul li p {
     display: block;
     color: #000;
     padding: 8px 16px;
@@ -28,7 +27,20 @@ li h2 p {
 }
 
 
-li h2 p:hover {
+ul li p:hover {
     background-color: #555;
     color: white;
+}
+
+@media (max-width: 800px) {
+    ul li p {
+            
+            padding: 0;
+            
+        }
+
+    ul {
+        width: 150px;
+    }
+
 }

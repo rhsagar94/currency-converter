@@ -1,0 +1,44 @@
+* {
+    box-sizing: border-box;
+}
+
+form {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+}
+
+form label {
+    margin: 5px 10px 5px 0;
+}
+
+form input {
+    margin: 5px 10px 5px 0;
+    padding: 10px;
+}
+
+form button {
+    padding: 10px 20px;
+    font-size: 20px;
+    background-color: rgb(39, 22, 141);
+    border: 1px solid #ddd;
+    color: white;
+    cursor: pointer;
+    font-weight: bolder;
+    border-radius: 4px;
+}
+
+form button:hover {
+    background-color: rgb(113, 65, 225);
+}
+
+@media (max-width: 800px) {
+    form input {
+        margin: 10px 0;
+    }
+
+    form {
+        flex-direction: column;
+        align-items: stretch;
+    }
+}
