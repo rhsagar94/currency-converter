@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import React from 'react';
-import './Home.css'
+import './Home.css';
 
 function Home(props) {
 	const [rate, setRate] = useState(null);
@@ -10,7 +10,6 @@ function Home(props) {
 			.then((res) => res.json())
 			.then((data) => {
 				setRate(data);
-				console.log(data);
 			})
 			.catch((err) => {
 				console.log('Something went wrong ', err);
@@ -20,10 +19,6 @@ function Home(props) {
 	useEffect(() => {
 		getData();
 	}, []);
-
-	// console.log(rate.base);
-	// console.log(rate.date);
-	// console.log(rate.rates.USD);
 
 	if (!rate) {
 		return <p>Loading information ...</p>;
