@@ -32,6 +32,7 @@ ul li p:hover {
     color: white;
 }
 
+
 @media (max-width: 800px) {
     ul li p {
             
